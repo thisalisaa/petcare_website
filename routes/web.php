@@ -17,4 +17,11 @@ Route::get('/products/{id}/edit', [ProductController::class, 'edit'])->name('pro
 Route::put('/products/{id}', [ProductController::class, 'update'])->name('products.update');
 Route::delete('/products/{id}', [ProductController::class, 'destroy'])->name('products.destroy');
 
+//PET HOTEL
+Route::get('/pethotel', [PethotelController::class, 'index'])->name('pethotel.index');
 
+Route::get('/pethotel/create', [PethotelController::class, 'create'])->name('pethotel.create');
+Route::post('/pethotel', [PethotelController::class, 'store'])->name('pethotel.store');
+Route::get('/pethotel/{id}/edit', [PethotelController::class, 'edit'])->name('pethotel.edit');
+Route::put('/pethotel/{id}', [PethotelController::class, 'update'])->name('pethotel.update');
+Route::delete('/pethotel/{id}', [PethotelController::class, 'destroy'])->name('pethotel.destroy');
