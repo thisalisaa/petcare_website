@@ -2,6 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ResetPasswordController;
+use App\Http\Controllers\ConfirmPasswordController;
+use App\Http\Controllers\ReportController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -9,6 +15,32 @@ Route::get('/', function () {
 
 
 
+// Rute untuk otentikasi dan fitur khusus pengguna yang login
+Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
+    Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
+    Route::post('/logout', [HomeController::class, 'logout'])->name('logout');
+    Route::resource('reports', ReportController::class);
+});
+
+// Rute untuk registrasi dan login
+Route::middleware('guest')->group(function () {
+    Route::get('/register', [HomeController::class, 'showRegistrationForm'])->name('register');
+    Route::post('/register', [HomeController::class, 'register']);
+    Route::get('/login', [HomeController::class, 'showLoginForm'])->name('login');
+    Route::post('/login', [HomeController::class, 'login']);
+});
+
+// Rute untuk fitur grooming dan pet hotel (umum)
+Route::get('/grooming', function () {
+    return view('grooming');
+})->name('grooming');
+
+Route::get('/pet-hotel', function () {
+    return view('pet-hotel');
+})->name('pet-hotel');
+
+Auth::routes();
 
 Route::get('/products', [ProductController::class, 'index'])->name('products.index');
 Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
@@ -25,3 +57,4 @@ Route::post('/pethotel', [PethotelController::class, 'store'])->name('pethotel.s
 Route::get('/pethotel/{id}/edit', [PethotelController::class, 'edit'])->name('pethotel.edit');
 Route::put('/pethotel/{id}', [PethotelController::class, 'update'])->name('pethotel.update');
 Route::delete('/pethotel/{id}', [PethotelController::class, 'destroy'])->name('pethotel.destroy');
+
