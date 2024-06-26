@@ -1,0 +1,46 @@
+/* styles.css */
+
+/* Gaya untuk latar belakang body */
+body {
+    background-color: #F6F193; /* Warna latar belakang F6F193 */
+}
+/* styles.css */
+
+/* Gaya untuk latar belakang box */
+.bg-yellow {
+    background-color: #FFFFFF; /* Warna putih */
+}
+
+/* Gaya untuk judul */
+.card-title {
+    color: #000000; /* Warna hitam */
+}
+
+/* Gaya untuk tombol */
+.btn {
+    background-color: #FFFFFF; /* Warna putih */
+    border-color: #FFFFFF; /* Warna border putih */
+    color: #000000; /* Warna teks hitam */
+}
+
+
+/* Gaya untuk kolom input */
+.form-control {
+    border-color: rgb(255, 199, 0); /* Warna border kuning */
+    padding: 10px; /* Menambahkan padding */
+}
+
+/* Gaya untuk label */
+label {
+    color: #000000; /* Warna teks hitam */
+}
+
+/* styles.css */
+
+/* Gaya untuk tombol */
+.btn-yellow {
+    background-color: #FFC700; /* Warna kuning */
+    border-color: #FFC700; /* Warna border kuning */
+    color: #fff; /* Warna teks putih */
+}
+
