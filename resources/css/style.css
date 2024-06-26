@@ -1,0 +1,123 @@
+body {
+    background-color: #FFFFE0; /* Warna latar belakang sesuai gambar */
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #FFFFE0; /* Warna latar belakang container */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.btn {
+    background-color: #FFD700; /* Warna tombol sesuai gambar */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: #FFC700; /* Warna tombol saat hover */
+}
+
+.alert-success {
+    color: green;
+    text-align: center;
+}
+
+        body {
+            background-color: orange;
+        }
+        .auth-logo {
+            display: block;
+            margin: 20px auto;
+            max-width: 100px; /* Adjust size as needed */
+        }
+        
+        .card-body.bg-white {
+            background-color: white;
+            text-align: center; /* Center the text */
+        }
+        .portrait-card {
+            width: 100%;
+            height: auto;
+            max-width: 400px; /* Adjust this value as needed */
+            margin: 0 auto;
+        }
+        .jua-font {
+            font-family: 'Jua', sans-serif;
+        }
+        .julius-font {
+            font-family: 'Julius Sans One', sans-serif;
+        }
+        .btn-orange {
+            background-color: orange;
+            border-color: orange;
+            color: white;
+            width: 100%; /* Make button width same as input */
+        }
+        .btn-orange:hover {
+            background-color: darkorange;
+            border-color: darkorange;
+        }
+        .btn-block {
+            display: block;
+            width: 100%;
+        }
+        .form-check {
+            text-align: left;
+        }
+        .btn-link {
+            text-align: left;
+            padding-left: 0;
+        }
+        main {
+            margin-top: 100px; /* Add margin to push content down */
+        }
+        .navbar-brand img {
+            height: 40px; /* Adjust logo size */
+            margin-right: 10px; /* Space between logo and text */
+        }
+        .alert-success {
+            color: #155724;
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid transparent;
+            border-radius: .25rem;
+        }
